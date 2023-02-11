@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ChatClient">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox prefHeight="20.0" prefWidth="200.0" spacing="20.0">
+      <children>
+          <Label  text="Pseudo"/>
+          <TextArea editable="false" fx:id="clientNameArea" prefHeight="15.0" prefWidth="80.0" />
+          <Label fx:id="clientHourLabel" text="Client hour: " />
+          <Label fx:id="serverHourLabel" text="Server hour: "/>
+      </children>
+   </HBox>
+    <TextArea fx:id="outputMessageTextArea" editable="false" prefHeight="800.0" prefWidth="200.0" />
+    <TextArea fx:id="inputMessageTextArea" onKeyPressed="#diffuseMessage" prefHeight="20.0" prefWidth="200.0" />
+</VBox>
